@@ -27,7 +27,7 @@ const mazeEnd = [rows - 1, cols - 1]
 
 // Animation speeds (ms)
 const mazeGenerationSpeed = 30
-const pathfindingSpeed = 50
+const pathfindingSpeed = 30
 
 // Global variables for maze state
 let grid, walls, existingWalls, exploredNodes, path
