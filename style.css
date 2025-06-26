@@ -1,0 +1,100 @@
+*{
+    --light-shades: #E4E8EC;
+    --light-accent: #7BA6C2;
+    --main-color: #396FB8;
+    --dark-accent: #666C85;
+    --dark-shades: #1A1D30;
+    background-color: var(--light-shades);
+    
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--dark-shades);
+}
+
+html{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 1em;
+}
+
+svg{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    padding: auto;
+}
+
+#mazeDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#controls {
+    background-color: var(--dark-accent);
+    border: 1em solid var(--dark-shades);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+#selectDiv, #buttons{
+    background-color: var(--dark-accent);
+}
+
+select{
+    width: fit-content;
+}
+
+@media screen and (max-width: 1199px) {
+    #main{
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: 1fr 2fr 5fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+    }   
+    #controls{
+        justify-content: space-around;
+        grid-area: 2 / 2 / 3 / 3;
+        border-radius: 1em;
+    }
+    #mazeDiv{
+        grid-area: 3 / 2 / 4 / 3;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #main{
+        display: grid;
+        grid-template-columns: 1fr 5fr repeat(2, 1fr);
+        grid-template-rows: 1fr 5fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+    }   
+    #controls{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: 2 / 3 / 3 / 4;
+        border-radius: 2em;
+    }
+    .selectDiv{
+        justify-content: space-around;
+        align-items: center;
+    }
+    #mazeDiv{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
