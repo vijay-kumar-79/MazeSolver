@@ -2,6 +2,9 @@
 
 A simple interactive web app to generate and solve mazes using various algorithms. Visualizes both maze generation and pathfinding step-by-step using D3.js and vanilla JavaScript.
 
+## Live At
+[Live Demo](https://vijay-kumar-79.github.io/PathFinder/)
+
 ## Features
 - **Maze Generation Algorithms:**
   - Depth First Search (DFS)
